@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>UFO Sightings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="static/images/nasa.jpg" class="img-fluid" alt="Responsive image">
+        <div id="main-title" class="text-center">
+          <h1>UFO Searcher</h1>
+          <p>Presentedby Seble</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <aside class="filters">
+          <div class="panel panel-default">
+<!--          <div class="panel-heading"><h5>Filter Search</h5></div> -->
+            <div class="panel-body">
+              <form>
+                <div class="form-group">
+                  <ul class="list-group" id="filters">
+                    <li class="filter list-group-item">
+                      <label for="date">Enter a Date</label>
+                      <input class="form-control" id="datetime" type="text" placeholder="">
+                    </li>
+	                <li class="filter list-group-item">
+                      <label for="city">Enter City</label>
+                      <input class="form-control" id="city" type="text" placeholder="">
+                    </li>
+	                <li class="filter list-group-item">
+                      <label for="state">Enter State (abbr.)</label>
+                      <input class="form-control" id="state" type="text" placeholder="">
+                    </li>
+	                <li class="filter list-group-item">
+                      <label for="country">Enter Country (abbr.)</label>
+                      <input class="form-control" id="country" type="text" placeholder="">
+                    </li>
+	                <li class="filter list-group-item">
+                      <label for="shape">Enter UFO Shape</label>
+                      <input class="form-control" id="shape" type="text" placeholder="">
+                    </li>					
+                  </ul>
+                </div>
+                <button id="filter-btn" type="submit" class="btn btn-info">Filter</button>
+              </form>
+            </div>
+          </div>
+        </aside>
+      </div>  
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="table-area" class="">
+          <table id="ufo-table" class="table table-striped table-responsive">
+            <thead class="thead-dark">
+              <tr>
+                <th class="table-head">Date</th>
+                <th class="table-head">City</th>
+                <th class="table-head">State</th>
+                <th class="table-head">Country</th>
+                <th class="table-head">Shape</th>
+                <th class="table-head">Duration</th>
+                <th class="table-head">Comments</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <div id="no-data" class=""></div>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="static/js/data.js"></script>
+  <script src="static/js/app.js"></script>
+</body>
+
+</html>
